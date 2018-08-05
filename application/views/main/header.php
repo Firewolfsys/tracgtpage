@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +50,7 @@
                         <h4>info@transportesdecarga.com.gt</h4>
                     </div>
                     <div class="header_c_text">
-                        <a class="quote_btn" href="request-quote.html">Logueo</a>
+                        <a class="quote_btn" data-toggle="modal" data-target="#myModal">Logueo</a>
                     </div>
                 </div>
             </div>
@@ -76,6 +77,22 @@
                             <li><a href="cargo-tracking.html">ATENCIÓN AL CLIENTE</a></li>
                             <li><a href="about.html">Sobre Nosotros</a></li>
                             <li><a href="about.html">Contacto</a></li>
+                            <?php 
+                             if (isset($_SESSION['user_id'])) {
+                                ?>
+                                <li class="dropdown submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['username']);  ?> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact.html">Mis Guias</a></li>
+                                    <li><a href="contact2.html">Ingreso de Guias</a></li>
+                                    <li><a href="contact2.html">Tracking individual</a></li>
+                                    <li><a href="contact2.html">Mi perfil</a></li>
+                                    <li><a href="<?php echo base_url('logout') ?>">Salir</a></li>
+                                </ul>
+                            </li>
+                             <?php  
+                                }
+                             ?>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
