@@ -93,6 +93,14 @@
     <script src="<?= base_url('js/locations.js')?>"></script>
     <!-- Main js -->
     <script src="<?= base_url('js/script.js')?>"></script>
+
+
+<!-- DataTables -->
+<script src="<?= base_url('plugins/datatables/jquery.dataTables.min.js')?>"></script>
+<script src="<?= base_url('plugins/datatables/dataTables.bootstrap4.min.js')?>"></script>
+
+<!-- PAGE SCRIPTS  --> 
+<script src="<?= base_url('dist/js/pages/administracion.js')?>"></script>
 </body>
 
 </html>

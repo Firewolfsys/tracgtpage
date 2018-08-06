@@ -10,6 +10,7 @@
     <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Transportes de Carga</title>
+
     <!-- Icon css link -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -23,6 +24,14 @@
     <link href="<?= base_url('vendors/owl-carousel/assets/owl.carousel.min.css')?>" rel="stylesheet">
     <link href="<?= base_url('vendors/magnific-popup/magnific-popup.css')?>" rel="stylesheet">
     <link href="<?= base_url('css/style.css')?>" rel="stylesheet">
+
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?= base_url('plugins/datatables/dataTables.bootstrap4.min.css')?>">
+
+
+
+
 </head>
 
 
@@ -83,8 +92,8 @@
                                 <li class="dropdown submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['username']);  ?> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="contact.html">Mis Guias</a></li>
-                                    <li><a href="contact2.html">Ingreso de Guias</a></li>
+                                    <li><a href="<?php echo base_url('guias') ?>">Mis Guias</a></li>
+                                    <li><a href="<?php echo base_url('nuevaguia') ?>">Ingreso de Guias</a></li>
                                     <li><a href="contact2.html">Tracking individual</a></li>
                                     <li><a href="contact2.html">Mi perfil</a></li>
                                     <li><a href="<?php echo base_url('logout') ?>">Salir</a></li>
