@@ -10,11 +10,11 @@
     <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Transportes de Carga</title>
-
+    
     <!-- Icon css link -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= base_url('css/font-awesome.min.css')?>" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url('css/bootstrap.min.css')?>" rel="stylesheet">
     <!-- Rev slider css -->
     <link href="<?= base_url('vendors/revolution/css/settings.css')?>" rel="stylesheet">
     <link href="<?= base_url('vendors/revolution/css/layers.css')?>" rel="stylesheet">
@@ -29,8 +29,8 @@
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url('plugins/datatables/dataTables.bootstrap4.min.css')?>">
 
-
-
+   <!-- Select2 -->
+  <link rel="stylesheet" href="<?= base_url('plugins/select2/select2.min.css')?>">
 
 </head>
 
@@ -58,9 +58,16 @@
                         <h5><img src="<?= base_url('img/email.png')?>" class="img-fluid" alt="Responsive image"> Correo Electrónico</h5>
                         <h4>info@transportesdecarga.com.gt</h4>
                     </div>
+                     <?php 
+                     if (!isset($_SESSION['user_id'])) {
+                        ?>
                     <div class="header_c_text">
-                        <a class="quote_btn" data-toggle="modal" data-target="#myModal">Logueo</a>
+                        <a class="quote_btn" href="" data-toggle="modal" data-target="#myModal">Logueo</a>
                     </div>
+
+                     <?php  
+                                }
+                             ?>
                 </div>
             </div>
         </div>
@@ -79,10 +86,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Inicio</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>">Inicio</a></li>
                             <li><a href="about.html">Servicios</a></li>
                             <li><a href="pricing.html">Precios</a></li>
-                            <li><a href="cargo-tracking.html">Tracking</a></li>
+                            <li><a href="<?php echo base_url('tracking') ?>">Tracking</a></li>
                             <li><a href="cargo-tracking.html">ATENCIÓN AL CLIENTE</a></li>
                             <li><a href="about.html">Sobre Nosotros</a></li>
                             <li><a href="about.html">Contacto</a></li>
@@ -94,7 +101,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="<?php echo base_url('guias') ?>">Mis Guias</a></li>
                                     <li><a href="<?php echo base_url('nuevaguia') ?>">Ingreso de Guias</a></li>
-                                    <li><a href="contact2.html">Tracking individual</a></li>
+                                    <li><a href="<?php echo base_url('tracking') ?>">Tracking individual</a></li>
                                     <li><a href="contact2.html">Mi perfil</a></li>
                                     <li><a href="<?php echo base_url('logout') ?>">Salir</a></li>
                                 </ul>

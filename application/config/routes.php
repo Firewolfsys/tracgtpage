@@ -53,5 +53,7 @@ $route['default_controller'] = 'Main';
 $route['login'] = 'login/login';
 $route['logout'] = 'login/logout';
 $route['nuevaguia'] = 'guias/nuevo';
+$route['editarguia/(:num)'] = 'guias/editar/$1';
+$route['verguia/(:num)'] = 'guias/visualizar/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

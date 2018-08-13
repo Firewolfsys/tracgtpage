@@ -101,6 +101,16 @@
 
 <!-- PAGE SCRIPTS  --> 
 <script src="<?= base_url('dist/js/pages/administracion.js')?>"></script>
+
+<!-- Select2 -->
+<script src="<?= base_url('plugins/select2/select2.full.min.js')?>"></script>
+
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+  })
+</script>
 </body>
 
 </html>

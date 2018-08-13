@@ -133,7 +133,7 @@
     <!--================Main Feature Area =================-->
     <section class="main_feature_area">
         <div class="right_feature_image">
-            <img src="<?= base_url('img/feature-right.jpg')?>" alt="">
+            <img src="<?= base_url('img/feature-right.png')?>" alt="">
         </div>
         <div class="left_feature_content">
             <div class="left_feature_inner_text">
