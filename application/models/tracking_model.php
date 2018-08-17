@@ -35,7 +35,7 @@ class Tracking_Model extends CI_Model {
        $this->db->select('id_guia, codigo_guia, descripcion, estado, fecha, hora');
        $this->db->from('v_tracking');
        $this->db->where('codigo_guia', $guia);
-       $this->db->order_by('fecha', 'desc');
+       $this->db->order_by('id_tracking', 'desc');
        $consulta = $this->db->get();
        $resultado = $consulta->row();
        return $resultado;
