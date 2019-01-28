@@ -90,7 +90,7 @@
                             <li><a href="about.html">Servicios</a></li>
                             <li><a href="pricing.html">Precios</a></li>
                             <li><a href="<?php echo base_url('tracking') ?>">Tracking</a></li>
-                            <li><a href="cargo-tracking.html">ATENCIÓN AL CLIENTE</a></li>
+                            <li><a href="cargo-tracking.html">ATENCIÓN</a></li>
                             <li><a href="about.html">Sobre Nosotros</a></li>
                             <li><a href="about.html">Contacto</a></li>
                             <?php 

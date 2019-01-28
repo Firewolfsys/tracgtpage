@@ -18,6 +18,8 @@ class guias extends CI_Controller {
 
     public function index()
     {
+        $this->datos['claseresultado'] = "";
+        $this->datos['resultado'] = "";
         $this->load->view('main/header');
         $usuario_id = $_SESSION['user_id'];
         $this->datos['guias_lista'] = $this->guias_model->obtener_todos($usuario_id);
@@ -31,15 +33,27 @@ class guias extends CI_Controller {
         $this->load->view('main/principal',$this->datos);
     }
 
-    public function nuevo()
+    public function nuevo($resultado = "")
     {
+        $claseresultado = "";
+        if($resultado  == "error")
+        {
+            $resultado = "Guia ya esta ingresada!";
+            $claseresultado = "danger";
+        }
+        if($resultado == "success")
+        {
+            $resultado = "Guia ingresada con exito.!";
+            $claseresultado = "success";
+        }
         $this->load->view('main/header');
+        $this->datos['claseresultado'] = $claseresultado;
+        $this->datos['resultado'] = $resultado;
         $this->datos['clientes_lista'] = $this->clientes_model->obtener_todos();
         $this->datos['lugares_lista'] = $this->lugares_model->obtener_todos();
         $this->datos['servicios_lista'] = $this->servicios_model->obtener_todos();
         $this->datos['tipos_pago_lista'] = $this->tipos_pago_model->obtener_todos();
         $this->load->view('guias/nuevo',$this->datos);
-        $this->load->view('main/footer');
 
     }
 
@@ -55,7 +69,6 @@ class guias extends CI_Controller {
         $this->datos['disabled'] = "";
         $this->datos['titulo'] = "Modificar Guia";
         $this->load->view('guias/ver',$this->datos);
-        $this->load->view('main/footer');
     }
 
 
@@ -71,7 +84,6 @@ class guias extends CI_Controller {
         $this->datos['disabled'] = "disabled";
         $this->datos['titulo'] = "Ver Guia";
         $this->load->view('guias/ver',$this->datos);
-        $this->load->view('main/footer');
     }
 
      public function guardar_post($id=null){

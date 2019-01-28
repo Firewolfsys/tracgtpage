@@ -21,10 +21,9 @@ class clientes_model extends CI_Model {
   }
     
  
-public function obtener_todos(){
-      $this->db->select('id_cliente, nombre_comercial, razon_social');
-      $this->db->from('clientes');
-      $this->db->order_by('nombre_comercial', 'asc');
+  public function obtener_todos(){
+      $this->db->select('*');
+      $this->db->from('v_clientes');
       $consulta = $this->db->get();
       $resultado = $consulta->result();
       return $resultado;

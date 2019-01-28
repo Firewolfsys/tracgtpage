@@ -110,6 +110,11 @@
     //Initialize Select2 Elements
     $('.select2').select2()
   })
+  $(document).on('focus', '.select2', function (e) {
+  if (e.originalEvent) {
+    $(this).siblings('select').select2('open');    
+  } 
+});
 </script>
 </body>
 
