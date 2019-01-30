@@ -145,7 +145,7 @@
                         <a href="#">
                             <h4>Eficiencia</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>La mayor eficiencia en la respuesta a nuestros clientes. </p>
                     </div>
                 </div>
                 <div class="media">
@@ -156,7 +156,7 @@
                         <a href="#">
                             <h4>Seguridad</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>Seguridad garantizada en el envio de sus encomiendas. </p>
                     </div>
                 </div>
                <div class="media">
@@ -167,7 +167,7 @@
                         <a href="#">
                             <h4>Tiempo de Entrega</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>Cumplimiento en el tiempo de entrega acordado con el cliente.. </p>
                     </div>
                 </div>
                 <div class="media">
@@ -178,7 +178,7 @@
                         <a href="#">
                             <h4>Personal Calificado</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>Personal calificado para poder apoyarle en cualquier servicio de transporte que necesite. </p>
                     </div>
                 </div>
                 <div class="media">
@@ -189,7 +189,7 @@
                         <a href="#">
                             <h4>Servicio Certificado</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>Servicio certificado por el cumplimiento de entrega. </p>
                     </div>
                 </div>
                 <div class="media">
@@ -200,7 +200,7 @@
                         <a href="#">
                             <h4>Compromiso</h4>
                         </a>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <p>Compromiso total con nuestros clientes en la entrega de sus encomiendas. </p>
                     </div>
                 </div>
             </div>

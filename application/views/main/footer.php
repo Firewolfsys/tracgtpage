@@ -6,7 +6,7 @@
                     <div class="col-md-3 col-xs-6">
                         <aside class="f_widget about_widget">
                             <img src="img/footer-logo.png" alt="">
-                            <p>Start.ly Logistics is a mobile first responsive website template for logistics or transportation.</p>
+                            <p>Transportes de Carga Empresa con más de 22 años de experiencia en el sector logístico.</p>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -18,44 +18,39 @@
                     <div class="col-md-3 col-xs-6">
                         <aside class="f_widget link_widget">
                             <div class="f_title">
-                                <h3>Quick Links</h3>
+                                <h3>Sobre Nosotros</h3>
                             </div>
                             <ul>
-                                <li><a href="#">INVESTER RELATIONS</a></li>
-                                <li><a href="#">PRESS & MEDIA</a></li>
-                                <li><a href="#">CAREER OPENINGS</a></li>
-                                <li><a href="#">OUR PARTNERS</a></li>
-                                <li><a href="#">LEGAL NOTICE</a></li>
-                                <li><a href="#">COOKIE POLICY</a></li>
-                                <li><a href="#">TERMS & CONDITIONS</a></li>
+                                <li><a href="#">Quienes Somos?</a></li>
+                                <li><a href="#">Nuestrea Misión</a></li>
+                                <li><a href="#">Nuestra Visión</a></li>
                             </ul>
                         </aside>
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <aside class="f_widget service_widget">
                             <div class="f_title">
-                                <h3>Services</h3>
+                                <h3>Nuestros Servicios</h3>
                             </div>
                             <ul>
-                                <li><a href="#">Standard Air Freight Services</a></li>
-                                <li><a href="#">Sea Freight Services</a></li>
-                                <li><a href="#">Full loads and part loads</a></li>
-                                <li><a href="#">Specialized Transport</a></li>
-                                <li><a href="#">Logistics Solutions</a></li>
-                                <li><a href="#">Tailored Project Transport</a></li>
+                                <li><a href="#">Logística de Transporte</a></li>
+                                <li><a href="#">Día Siguiente</a></li>
+                                <li><a href="#">Dos Días</a></li>
+                                <li><a href="#">Terrestre</a></li>
+                                <li><a href="#">Múltiple</a></li>
+                                <li><a href="#">Retornos</a></li>
                             </ul>
                         </aside>
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <aside class="f_widget info_widget">
                             <div class="f_title">
-                                <h3>Contact</h3>
+                                <h3>Contactenos</h3>
                             </div>
                             <div class="contact_details">
-                                <p>21 E. Valley Stream Blvd.<br class="info_br" /> Valley Stream, NY 11580, USA</p>
-                                <p>Phone: <a href="tel:+1-(255)-7899">+1 (255) 7899</a></p>
-                                <p>Fax: <a href="#">+1 (320) 5228</a></p>
-                                <p>Email: <a href="mailto:hello@logistics.com">hello@logistics.com</a></p>
+                                <p>16 Avenida 23-33 Zona 12.<br class="info_br" /> Colonia Reformita, Ciudad de Guatemala</p>
+                                <p>Telefono: <a href="tel:+50222094242">+502 2209-4242</a></p>
+                                <p>Email: <a href="mailto:info@transportesdecarga.com.gt">info@transportesdecarga.com.gt</a></p>
                             </div>
                         </aside>
                     </div>
@@ -64,7 +59,7 @@
         </div>
         <div class="footer_copy_right">
             <div class="container">
-                <h4>Copyright ©
+                <h4>Copyright TecnoSoluciones©
                     <script>
                         document.write(new Date().getFullYear());
                     </script>. All rights reserved.</h4>

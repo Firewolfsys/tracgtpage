@@ -41,7 +41,7 @@
         <div class="header_top">
             <div class="container">
                 <div class="pull-left">
-                    <a href="index.html">
+                    <a href="<?= base_url()?>">
                         <img src="<?= base_url('img/logo.png')?>" class="img-fluid" alt="Responsive image">
                     </a>
                 </div>
@@ -86,12 +86,31 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="<?php echo base_url() ?>">Inicio</a></li>
-                            <li><a href="about.html">Servicios</a></li>
-                            <li><a href="pricing.html">Precios</a></li>
+                            <li class="dropdown submenu">
+                                <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sobre Nosotros<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo base_url() ?>">Quienes Somos?</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Misión</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Visión</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo base_url() ?>">Logística de Transporte</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Día Siguiente</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atención al Cliente<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo base_url() ?>">Cómo Solicitar un Servicio?</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Lista de Artículos Prohibidos</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Solicitud de Reportes</a></li>
+                                    <li><a href="<?php echo base_url() ?>">Proceso de Reclamos</a></li>
+                                </ul>
+                            </li>
                             <li><a href="<?php echo base_url('tracking') ?>">Tracking</a></li>
-                            <li><a href="cargo-tracking.html">ATENCIÓN</a></li>
-                            <li><a href="about.html">Sobre Nosotros</a></li>
                             <li><a href="about.html">Contacto</a></li>
                             <?php 
                              if (isset($_SESSION['user_id'])) {
