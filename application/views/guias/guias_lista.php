@@ -32,7 +32,7 @@
                           <td width="10%">
                             <div class="btn-group">
                               <a class="btn btn-primary" title="Ver Guia" href="<?php echo base_url() ?>verguia/<?php echo $item->id_guia ?>"> <i class="fa fa-eye"></i> </a>
-                              <a class="btn btn-primary" title="Modificar Guia" href="<?php echo base_url() ?>editarguia/<?php echo $item->id_guia ?>"> <i class="fa fa-edit"></i></a>
+                              <!--<a class="btn btn-primary" title="Modificar Guia" href="<?php echo base_url() ?>editarguia/<?php echo $item->id_guia ?>"> <i class="fa fa-edit"></i></a>-->
                               <a class="btn btn-primary" title="Ver Tracking" href="<?php echo base_url() ?>tracking/ver_tracking/<?php echo $item->codigo_guia ?>"> <i class="fa fa-list"></i></a>
                             </div>
                           </td>
