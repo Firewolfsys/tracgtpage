@@ -34,6 +34,7 @@
                               <a class="btn btn-primary" title="Ver Guia" href="<?php echo base_url() ?>verguia/<?php echo $item->id_guia ?>"> <i class="fa fa-eye"></i> </a>
                               <!--<a class="btn btn-primary" title="Modificar Guia" href="<?php echo base_url() ?>editarguia/<?php echo $item->id_guia ?>"> <i class="fa fa-edit"></i></a>-->
                               <a class="btn btn-primary" title="Ver Tracking" href="<?php echo base_url() ?>tracking/ver_tracking/<?php echo $item->codigo_guia ?>"> <i class="fa fa-list"></i></a>
+                              <a class="btn btn-primary" title="Imprimir Guia"  href="<?php echo base_url() ?>guias/imprimir_guia/<?php echo $item->id_guia ?>"><i class="fa fa-print"></i></a>
                             </div>
                           </td>
                         </tr>

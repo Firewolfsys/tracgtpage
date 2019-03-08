@@ -5,25 +5,16 @@
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <aside class="f_widget about_widget">
-                            <img src="img/footer-logo.png" alt="">
+                            <!--<img src="img/footer-logo.png" alt="">-->
+                            <div class="f_title">
+                            <h3>Transportes de Carga</h3>
+                             </div>
                             <p>Transportes de Carga Empresa con más de 22 años de experiencia en el sector logístico.</p>
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <aside class="f_widget link_widget">
-                            <div class="f_title">
-                                <h3>Sobre Nosotros</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Quienes Somos?</a></li>
-                                <li><a href="#">Nuestrea Misión</a></li>
-                                <li><a href="#">Nuestra Visión</a></li>
+                                <li><a href="https://www.facebook.com/transportesdecargagt" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCTmNHVBnbQi2FX6IrJ3x-Pw" target="_blank"><i class="fa fa-pinterest"></i></a></li>
                             </ul>
                         </aside>
                     </div>
@@ -33,12 +24,20 @@
                                 <h3>Nuestros Servicios</h3>
                             </div>
                             <ul>
-                                <li><a href="#">Logística de Transporte</a></li>
-                                <li><a href="#">Día Siguiente</a></li>
-                                <li><a href="#">Dos Días</a></li>
-                                <li><a href="#">Terrestre</a></li>
-                                <li><a href="#">Múltiple</a></li>
-                                <li><a href="#">Retornos</a></li>
+                                <li><a href="<?php echo base_url('servicios_info/logistica_transporte') ?>">Logística de Transporte</a></li>
+                                <li><a href="<?php echo base_url('servicios_info/nuestros_servicios') ?>">Nuestros Servicios</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <aside class="f_widget service_widget">
+                            <div class="f_title">
+                                <h3>Atención al Cliente</h3>
+                            </div>
+                            <ul>
+                                <li><a href="<?php echo base_url('atencion_cliente/articulos_prohibidos') ?>">Artículos Prohibidos?</a></li>
+                                <li><a href="<?php echo base_url('atencion_cliente/manual_empaque') ?>">Manual de Empaque</a></li>
+                                <li><a href="<?php echo base_url('atencion_cliente/proceso_reclamos') ?>">Proceso de Reclamos</a></li>
                             </ul>
                         </aside>
                     </div>

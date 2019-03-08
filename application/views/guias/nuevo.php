@@ -13,7 +13,7 @@
 
 function validarexisteguia()
 {
-  var url = '<?= base_url('transporte/guias/validaguia/') ?>';
+  var url = '<?= base_url('guias/validaguia/') ?>';
   var codigo_guia = document.getElementById("codigo_guia").value;
          $.ajax({
           url: url + codigo_guia,
@@ -157,32 +157,28 @@ window.onload=disabled;
                   </div>
               </div>
             </div>
-        </br>
+          <!--obtencion de datos automaticos del cliente -->
+          <div class="row">
+            <div class="invisible col-md-3">
+                <select class="form-control select2"  id="id_cliente_envia" name="id_cliente_envia">
+                  <?php foreach ($clientes_lista as $list): ?> 
+                  <option data-direccion="<?php echo $list->direccion ?>" value="<?php echo $list->id_cliente ?>" <?php if($list->id_cliente==$id_cliente_envia) echo "selected"  ?>><?php echo $list->nombre_comercial ?> </option>
+                  <?php endforeach; ?>
+                   </select>
+            </div>
+            <div class="invisible col-md-3">
+                <input type="text"  name="responsable_envia" class="form-control" required="required" value="<?php echo $responsable_envia ?>" >
+            </div>
+            <div class="invisible col-md-3">
+                  <input type="text"  name="telefono_envia" class="form-control"  value="<?php echo $responsable_envia_telefono ?>" >
+            </div>
+            <div class="invisible col-md-3">
+                <input type="text" id="direccion_envia" name="direccion_envia" class="form-control" required="required"  value="<?php echo $direccion_envia ?>" >
+            </div>
+            </div>
             <!-- /.row -->
             <div class="row">
-            <div class="col-md-4">
-                 <div class="form-group">
-                    <label><strong>Cliente que Envía <FONT COLOR="red">*</FONT></strong></label>
-                       <select class="form-control select2"  id="id_cliente_envia" name="id_cliente_envia">
-                            <?php foreach ($clientes_lista as $list): ?> 
-                            <option  data-direccion="<?php echo $list->direccion ?>" value="<?php echo $list->id_cliente ?>"><?php echo $list->nombre_comercial ?> </option>
-                            <?php endforeach; ?>
-                        </select>
-                  </div>
-            </div>
-              <div class="col-md-4">
-                 <div class="form-group">
-                  <label><strong>Responsable que Envía <FONT COLOR="red">*</FONT></strong></label>
-                  <input type="text"  name="responsable_envia" class="form-control" required="required" value="" >
-                </div>
-              </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label><strong>Teléfono  de quien Envía</strong></label>
-                    <input type="text"  name="telefono_envia" class="form-control"  value="" >
-                  </div>
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label><strong>Lugar Origen <FONT COLOR="red">*</FONT></strong></label>
                        <select class="form-control select2" name="id_lugar_origen">
@@ -192,35 +188,8 @@ window.onload=disabled;
                         </select>
                   </div>
             </div>
-            <div class="col-md-8">
-                 <div class="form-group">
-                    <label><strong>Dirección de quien Envía <FONT COLOR="red">*</FONT></strong></label>
-                    <input type="text" id="direccion_envia" name="direccion_envia" class="form-control" required="required" value="" >
-                  </div>
-            </div>
-             <div class="col-md-4">
-               <div class="form-group">
-                    <label><strong>Cliente que Recibe <FONT COLOR="red">*</FONT></strong></label>
-                       <select class="form-control select2" id="id_cliente_recibe" name="id_cliente_recibe">
-                            <?php foreach ($clientes_lista as $list): ?> 
-                            <option data-direccion="<?php echo $list->direccion ?>" value="<?php echo $list->id_cliente ?>"><?php echo $list->nombre_comercial ?> </option>
-                            <?php endforeach; ?>
-                        </select>
-                  </div>
-            </div>
-             <div class="col-md-4">
-                 <div class="form-group">
-                  <label><strong>Responsable que Recibe <FONT COLOR="red">*</FONT></strong></label>
-                  <input type="text"  name="responsable_recibe" class="form-control" required="required" value="" >
-                </div>
-              </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label><strong>Teléfono  de quien Recibe</strong></label>
-                    <input type="text"  name="telefono_recibe" class="form-control"  value="" >
-                  </div>
-            </div>
-             <div class="col-md-4">
+
+            <div class="col-md-6">
                  <div class="form-group">
                     <label><strong>Lugar Destino <FONT COLOR="red">*</FONT></strong></label>
                        <select class="form-control select2" name="id_lugar_destino">
@@ -230,7 +199,31 @@ window.onload=disabled;
                         </select>
                   </div>
             </div>
-            <div class="col-md-8">
+               
+             <div class="col-md-3">
+               <div class="form-group">
+                    <label><strong>Cliente que Recibe <FONT COLOR="red">*</FONT></strong></label>
+                       <select class="form-control select2" id="id_cliente_recibe" name="id_cliente_recibe">
+                            <?php foreach ($clientes_lista as $list): ?> 
+                            <option data-direccion="<?php echo $list->direccion ?>" value="<?php echo $list->id_cliente ?>"><?php echo $list->nombre_comercial ?> </option>
+                            <?php endforeach; ?>
+                        </select>
+                  </div>
+            </div>
+             <div class="col-md-3">
+                 <div class="form-group">
+                  <label><strong>Responsable que Recibe <FONT COLOR="red">*</FONT></strong></label>
+                  <input type="text"  name="responsable_recibe" class="form-control" required="required" value="" >
+                </div>
+              </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label><strong>Teléfono  de quien Recibe</strong></label>
+                    <input type="text"  name="telefono_recibe" class="form-control"  value="" >
+                  </div>
+            </div>
+        
+            <div class="col-md-3">
                  <div class="form-group">
                     <label><strong>Dirección de quien Recibe <FONT COLOR="red">*</FONT></strong></label>
                     <input type="text" id="direccion_recibe" name="direccion_recibe" class="form-control" required="required" value="" >

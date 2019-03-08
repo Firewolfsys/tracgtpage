@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
+    <link rel="icon" href="<?= base_url('img/fav-icon.png')?>" type="image/x-icon" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Transportes de Carga</title>
     
@@ -59,7 +59,7 @@
                         <h4>info@transportesdecarga.com.gt</h4>
                     </div>
                      <?php 
-                     if (!isset($_SESSION['user_id'])) {
+                     if (!isset($_SESSION['user_id_web'])) {
                         ?>
                     <div class="header_c_text">
                         <a class="quote_btn" href="" data-toggle="modal" data-target="#myModal">Logueo</a>
@@ -89,34 +89,31 @@
                             <li class="dropdown submenu">
                                 <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sobre Nosotros<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo base_url() ?>">Quienes Somos?</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Misión</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Visión</a></li>
+                                    <li><a href="<?php echo base_url('sobre_nosotros/quienesomos') ?>">Quienes Somos?</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown submenu">
                                 <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo base_url() ?>">Logística de Transporte</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Día Siguiente</a></li>
+                                    <li><a href="<?php echo base_url('servicios_info/logistica_transporte') ?>">Logística de Transporte</a></li>
+                                    <li><a href="<?php echo base_url('servicios_info/nuestros_servicios') ?>">Nuestros Servicios</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown submenu">
                                 <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atención al Cliente<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo base_url() ?>">Cómo Solicitar un Servicio?</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Lista de Artículos Prohibidos</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Solicitud de Reportes</a></li>
-                                    <li><a href="<?php echo base_url() ?>">Proceso de Reclamos</a></li>
+                                    <li><a href="<?php echo base_url('atencion_cliente/articulos_prohibidos') ?>">Artículos Prohibidos?</a></li>
+                                    <li><a href="<?php echo base_url('atencion_cliente/manual_empaque') ?>">Manual de Empaque</a></li>
+                                    <li><a href="<?php echo base_url('atencion_cliente/proceso_reclamos') ?>">Proceso de Reclamos</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo base_url('tracking') ?>">Tracking</a></li>
-                            <li><a href="about.html">Contacto</a></li>
+                            <li><a href="<?php echo base_url('contacto/contacto') ?>">Contacto</a></li>
                             <?php 
-                             if (isset($_SESSION['user_id'])) {
+                             if (isset($_SESSION['user_id_web'])) {
                                 ?>
                                 <li class="dropdown submenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['username']);  ?> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['username_web']);  ?> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="<?php echo base_url('guias') ?>">Mis Guias</a></li>
                                     <li><a href="<?php echo base_url('nuevaguia') ?>">Ingreso de Guias</a></li>

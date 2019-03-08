@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class servicios extends CI_Controller {
     public function __construct() {
         parent::__construct();
-        if (!isset($_SESSION['user_id'])) {
+        if (!isset($_SESSION['user_id_web'])) {
             redirect('login');
         } else {
             $this->load->model('servicios_model');

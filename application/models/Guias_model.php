@@ -87,4 +87,32 @@ class Guias_model extends CI_Model {
        $resultado = $consulta->result();
        return $resultado;
     }
+
+    public function obtener_guia($id){
+       $this->db->select('*');
+       $this->db->from('v_guias');
+       $this->db->where('id_guia', $id);
+       $consulta = $this->db->get();
+       $resultado = $consulta->row();
+       return $resultado;
+    }
+
+    public function info_usuario($id_usuario_crea){
+      //buscamos la informacion del usuario logueado
+      $this->db->select('*');
+      $this->db->from('clientes_users');
+      $this->db->where('id_cliente', $id_usuario_crea);
+      $consultausuario = $this->db->get();
+      $resultadousuario = $consultausuario->row();
+      return $resultadousuario;
+    }
+
+      public function validar_guia_existe($codigo){
+       $this->db->select('*');
+       $this->db->from('guias');
+       $this->db->where('codigo_guia', $codigo);
+       $consulta = $this->db->get();
+       $resultado = $consulta->row();
+       return $resultado;
+    }
 }

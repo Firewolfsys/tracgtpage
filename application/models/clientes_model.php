@@ -28,4 +28,13 @@ class clientes_model extends CI_Model {
       $resultado = $consulta->result();
       return $resultado;
   }
+
+    public function obtener_cliente_id($id_cliente){
+      $this->db->select('*');
+      $this->db->from('clientes');
+      $this->db->where('id_cliente', $id_cliente);
+      $consultacliente = $this->db->get();
+      $resultadocliente = $consultacliente->row();
+      return $resultadocliente;
+  }
 }

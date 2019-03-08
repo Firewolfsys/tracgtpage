@@ -55,7 +55,7 @@ class Login_model extends CI_Model {
 	public function resolve_user_login($username, $password) {
 		
 		$this->db->select('password');
-		$this->db->from('users');
+		$this->db->from('clientes_users');
 		$this->db->where('username', $username);
 		$hash = $this->db->get()->row('password');
 		return $this->verify_password_hash($password, $hash);
@@ -72,7 +72,7 @@ class Login_model extends CI_Model {
 	public function get_user_id_from_username($username) {
 		
 		$this->db->select('id');
-		$this->db->from('users');
+		$this->db->from('clientes_users');
 		$this->db->where('username', $username);
 
 		return $this->db->get()->row('id');
@@ -88,7 +88,7 @@ class Login_model extends CI_Model {
 	 */
 	public function get_user($user_id) {
 		
-		$this->db->from('users');
+		$this->db->from('clientes_users');
 		$this->db->where('id', $user_id);
 		return $this->db->get()->row();
 		
