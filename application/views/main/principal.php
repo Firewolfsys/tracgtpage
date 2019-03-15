@@ -73,7 +73,7 @@
                         <div class="feature_s_item">
                             <img alt="" class="svg social-link" src="<?= base_url('img/icon/svg/aeroplane.svg')?>" />
                             <a href="#">
-                                <h4>Logística de Transporte</h4>
+                                <h4>Logística de Transporteee</h4>
                             </a>
                             <p>Nuestro modo de operar garantiza que su paquetería será entregada a tiempo!!!.</p>
                         </div>
