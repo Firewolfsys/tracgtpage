@@ -10,13 +10,17 @@ class Tracking extends CI_Controller {
     }
     public function index()
     {
-        $this->load->view('main/header');
+        $this->datos['claseresultado'] = "";
+        $this->datos['resultado'] = "";
+        $this->load->view('main/header',$this->datos);
         $this->load->view('tracking/principal');
         $this->load->view('main/footer');
     }
     public function ver_tracking($guia)
     {
-        $this->load->view('main/header');
+        $this->datos['claseresultado'] = "";
+        $this->datos['resultado'] = "";
+        $this->load->view('main/header',$this->datos);
         $this->datos['tracking_lista'] = $this->tracking_model->obtener_tracking($guia);
         $this->datos['ultimo_tracking'] = $this->tracking_model->obtener_ultimo_tracking($guia);
         $this->datos['guia'] = $guia;

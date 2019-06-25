@@ -388,6 +388,7 @@ function servicio_precio()
 $("#success-alert").fadeTo(2000, 800).slideUp(800, function(){
     $("#success-alert").slideUp(800);
 });
+$('#id_tipo_pago').val(1).change();
 </script>
 <script>
  function focusinicial() {

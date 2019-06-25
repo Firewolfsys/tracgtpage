@@ -109,6 +109,9 @@
     $(this).siblings('select').select2('open');    
   } 
 });
+  $("#success-alert").fadeTo(2000, 900).slideUp(900, function(){
+    $("#success-alert").slideUp(900);
+});
 </script>
 </body>
 

@@ -87,7 +87,7 @@ class Login_model extends CI_Model {
 	 * @return object the user object
 	 */
 	public function get_user($user_id) {
-		
+		$this->db->select('*');
 		$this->db->from('clientes_users');
 		$this->db->where('id', $user_id);
 		return $this->db->get()->row();

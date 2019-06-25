@@ -9,7 +9,9 @@ class Main extends CI_Controller {
     }
     public function index()
     {
-        $this->load->view('main/header');
+        $this->datos['claseresultado'] = "";
+        $this->datos['resultado'] = "";
+        $this->load->view('main/header',$this->datos);
         $this->load->view('main/principal');
         $this->load->view('main/footer');
     }

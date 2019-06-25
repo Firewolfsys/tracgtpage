@@ -8,7 +8,9 @@ class contacto extends CI_Controller {
     }
 
     public function contacto(){
-        $this->load->view('main/header');
+        $this->datos['claseresultado'] = "";
+        $this->datos['resultado'] = "";
+        $this->load->view('main/header',$this->datos);
         $this->load->view('contacto/contacto');
         $this->load->view('main/footer');
     }

@@ -49,28 +49,27 @@ class Login extends CI_Controller {
 			$password = $this->input->post('password');
 			
 			if ($this->login_model->resolve_user_login($username, $password)) {
-				
 				$user_id = $this->login_model->get_user_id_from_username($username);
 				$user    = $this->login_model->get_user($user_id);
-
 				// set session user datas
 				$_SESSION['user_id_web']        = (int)$user->id;
 				$_SESSION['username_web']       = (string)$user->username;
 				$_SESSION['logged_in_web']      = (bool)true;
-				$_SESSION['is_confirmed_web']   = (bool)$user->is_confirmed;
-				$_SESSION['is_admin_web']       = (bool)$user->is_admin;
 				// user login ok
-				redirect(base_url());
+				//redirect(base_url());
+				$this->datos['claseresultado'] = "success";
+        		$this->datos['resultado'] = "Bienvenido ".$_SESSION['username_web'] ;
+        		$this->load->view('main/header',$this->datos);
+		        $this->load->view('main/principal');
+		        $this->load->view('main/footer');
 				
 			} else {
-				
 				// login failed
-				$data->error = 'Usuario o Contraseña invalido.';
-				
-				// send error to the view
-				$this->load->view('login/header');
-				$this->load->view('login/login', $data);
-				$this->load->view('login/footer');
+				$this->datos['claseresultado'] = "danger";
+        		$this->datos['resultado'] = "Usuario o Contraseña incorrecto.!";
+        		$this->load->view('main/header',$this->datos);
+		        $this->load->view('main/principal');
+		        $this->load->view('main/footer');
 				
 			}
 		
@@ -86,16 +85,19 @@ class Login extends CI_Controller {
 		
 		// create the data object
 		$data = new stdClass();
-		
+		$usuario = $_SESSION['username_web'];
 		if (isset($_SESSION['logged_in_web']) && $_SESSION['logged_in_web'] === true) {
 			
 			// remove session datas
 			foreach ($_SESSION as $key => $value) {
 				unset($_SESSION[$key]);
 			}
-			
-			redirect(base_url());
-			
+			//redirect(base_url());
+			$this->datos['claseresultado'] = "info";
+        	$this->datos['resultado'] = "Feliz dia ". $usuario;
+        	$this->load->view('main/header',$this->datos);
+		    $this->load->view('main/principal');
+		    $this->load->view('main/footer');
 		} else {
 			
 			// there user was not logged in, we cannot logged him out,

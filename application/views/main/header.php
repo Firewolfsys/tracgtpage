@@ -1,7 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,8 +32,6 @@
   <link rel="stylesheet" href="<?= base_url('plugins/select2/select2.min.css')?>">
 
 </head>
-
-
 <body>
     <!--================Header Area =================-->
     <header class="main_header_area">
@@ -142,5 +139,14 @@
                 <!-- /.container -->
             </nav>
         </div>
+    <!-- mensaje de error o logueado correcgtamente -->
+       <!--notificacion-->
+            <?php if ($resultado!="") : ?>
+            <div class="alert alert-<?= $claseresultado ?> alert-dismissible fade in" id="success-alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong><?= $resultado ?></strong>
+            </div>
+              <?php endif; ?>
+            <!--termina notificacion-->
     </header>
     <!--================End Header Area =================-->
